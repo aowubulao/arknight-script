@@ -72,18 +72,6 @@ public class ArkScript {
         }
     }
 
-    private static String getPhysical() throws Exception {
-        CommonUtil.screenshot(3);
-        cutImage(1255,24, 170, 45);
-        String s = ImageUtil.ocrPicture();
-        return s.substring(0, s.indexOf("/"));
-    }
-
-    private static String getSpendPhysical() throws Exception {
-        cutImage(1329,762, 50, 32);
-        return ImageUtil.ocrPicture().replaceAll("-", "").replaceAll("\n", "");
-    }
-
     public static void cutImage(int x, int y, int width, int height) {
         ImgUtil.cut(
                 FileUtil.file(IMG_PATH + IMG_NAME),

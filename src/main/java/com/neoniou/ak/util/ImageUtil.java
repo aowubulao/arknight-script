@@ -1,8 +1,5 @@
 package com.neoniou.ak.util;
 
-import net.sourceforge.tess4j.ITesseract;
-import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfFloat;
@@ -50,21 +47,5 @@ public class ImageUtil {
         Imgproc.cvtColor(image0, image, Imgproc.COLOR_BGR2GRAY);
 
         return image0;
-    }
-
-    public static String ocrPicture() {
-        File file = new File(PATH);
-        ITesseract instance = new Tesseract();
-        instance.setDatapath(LANGUAGE_PATH);
-
-        instance.setLanguage("chi_sim");
-        instance.setTessVariable("user_defined_dpi", "300");
-        String result = null;
-        try {
-            result =  instance.doOCR(file);
-        } catch (TesseractException e) {
-            e.printStackTrace();
-        }
-        return result;
     }
 }
