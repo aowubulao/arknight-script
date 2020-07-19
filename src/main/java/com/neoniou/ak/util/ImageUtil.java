@@ -18,8 +18,6 @@ public class ImageUtil {
 
     private static final String PATH = "C:\\ak-temp\\temp_cut.png";
 
-    private static final String LANGUAGE_PATH = "E:\\program\\tessdata\\tessdata_best";
-
     static {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
     }

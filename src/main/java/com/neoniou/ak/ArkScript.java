@@ -22,7 +22,6 @@ public class ArkScript {
     private static final String CUT_IMG_NAME = "temp_cut.png";
 
     public static void main(String[] args) throws Exception {
-
         System.out.println("-------- Enter the basic information --------");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Current physical: ");

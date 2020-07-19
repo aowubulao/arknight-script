@@ -10,7 +10,7 @@ import static com.neoniou.ak.ArkScript.cutImage;
 public class Tess4jTest {
 
     public void test1() {
-  
+
     }
 
     public void test2() {
